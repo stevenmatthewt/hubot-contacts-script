@@ -1,0 +1,17 @@
+{
+  "name": "hubot-contacts-script",
+  "version": "0.0.1",
+  "description": "Script to allow for setting and viewing contact info",
+  "main": "contacts.coffee",
+  "keywords": [
+    "hubot"
+  ],
+  "author": "Steven Thomas <steven.thomas@careerbuilder.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenmatthewt/hubot-contacts-script"
+  },
+  "dependencies": {
+    "hubot-contacts": "git://github.com/stevenmatthewt/hubot-contacts.git#master"
+  }
+}
