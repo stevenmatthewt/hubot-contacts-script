@@ -7,7 +7,7 @@
 #   hubot get all my contact information - Gets a list of all available contact information
 
 module.exports = (robot) ->
-  Contacts = require('./index.js')(robot)
+  Contacts = require('hubot-contacts')(robot)
 
   robot.respond /(set my email to )(.*)/i, (msg) ->
   	if Contacts.set msg.message.user.id, 'email', msg.match[2]
@@ -58,12 +58,4 @@ module.exports = (robot) ->
     else
       msg.reply "You don't have any contact information!"
 
-  robot.respond /(get email from Github username )(.*)/i, (msg) ->
-    githubUsername = msg.match[2]
-    id = Contacts.lookUpId('githubUsername', githubUsername)
-    if id
-      response = Contacts.get id, 'email'
-    if response
-      msg.reply response
-    else 
-      msg.reply 'There is no user by that Github username.'
+
